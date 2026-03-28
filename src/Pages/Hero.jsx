@@ -2,23 +2,35 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className='main h-screen w-full relative bg-[#0a0a0a]'>
+    <section className='main h-screen w-full relative '>
         {/* The 65% height container */}
-        <div className="con w-full h-[65%] overflow-hidden relative">
+        <div className="con w-full h-screen overflow-hidden relative">
             
             <img 
               className='object-cover w-full h-full object-center' 
               // New verified Unsplash link (Modern Architecture)
-              src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=2074&auto=format&fit=crop" 
+              src="/images/bg.jpg" 
               alt="Modern house exterior" 
               // Basic error handling just in case
-              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=2000&auto=format&fit=crop" }}
+             
             />
 
             {/* Subtle top overlay to help your glassmorphism nav visibility */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent"></div>
+
+            <div className='absolute inset-0  z-10 flex m-auto tracking-tighter text-white'>
+                <h1 className='text-[40vh] font-bold tracking-tighter uppercase '>PLANETICS</h1>
+               
+            </div>
+            <div className='absolute inset-0 top-150 max-w-2xl p-4  z-10 tracking-tighter text-white'>
+                <p className='text-2xl leading-6 text-gray-50 ' >A vision transparent property and peace where unmatched craftsman inspire eligance innovationto enrich lives</p>
+            </div>
+
+
+
             
         </div>
+        
     </section>
   )
 }
